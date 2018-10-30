@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-</head>
-<body>  
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Pick Tittle</th>
-                <th scope="col">Image</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
+    
+    <!-- head -->
+    <?php require 'partials/head.php' ?>
+
+    <!-- navegation var -->
+    <?php require 'partials/nav.php' ?>
+
+    <!-- table header -->
+    <?php require 'partials/table.head.php' ?>
+
         <tbody>
+        
             <?php foreach ($picks as $pick) : ?>
                 <tr>
                     <th scope="row"> <?php echo $pick->id ?> </th>
@@ -29,7 +21,9 @@
             <?php endforeach; ?>
             
         </tbody>    
-    </table>
-   
-</body>
-</html>
+
+    <!-- table footer -->
+    <?php require 'partials/table.footer.php' ?>
+
+    <!-- footer -->
+    <?php require 'partials/footer.php' ?>

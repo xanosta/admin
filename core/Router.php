@@ -19,4 +19,13 @@ class Router {
         throw new Exception("No route define for this URI");
         
     }
+
+    /**
+     * public static function load($file) {
+     * 
+     *  $router = new static;
+     * 
+     *  require $file;
+     * }
+     */
 }
