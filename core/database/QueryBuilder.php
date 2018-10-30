@@ -24,4 +24,18 @@ class QueryBuilder {
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_OBJ);
     }
+
+    
+    public function selectAllPicks($country, $language) {
+
+        $this->pdo->query("SET NAMES 'utf8'");
+
+        $statement = $this->pdo->prepare(
+                                "SELECT * from db_gms_site.staffpicks 
+                                WHERE country = '$country' AND language = '$language' 
+                                ORDER BY id DESC"
+                                );
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_OBJ);
+    }
 }
